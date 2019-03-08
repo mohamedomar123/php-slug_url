@@ -8,7 +8,7 @@
 	include 'db/connect.php';
 	
 	// Check If Get Request Itemid Is Numeric & Get The Integet Valu Of It
-	$postid = isset($_GET['article_id']) && is_numeric($_GET['article_id']) ? intval($_GET['article_id']) : 0;
+	$postid = isset($_GET['post_id']) && is_numeric($_GET['post_id']) ? intval($_GET['post_id']) : 0;
 
 	// Select All Data Depend On This Id
 	$stmt = $con->prepare("SELECT * FROM items WHERE Item_ID = ?");
